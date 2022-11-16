@@ -1,0 +1,13 @@
+---
+- name:
+  hosts: linux
+  vars:
+    distribution:
+
+  tasks:
+    - {include: updates.yml, become: true}
+    - {include: rootlock.yml, become: true}
+    - {include: ufw.yml, become: true}
+    - {include: cronjobs.yml, become: true}
+
+

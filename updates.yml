@@ -1,0 +1,36 @@
+---
+# this is a simple but crucial job
+# you must update your systems to make sure theyre as secure as possible
+
+# the name of this YAML file
+
+
+# what hosts you want to use, which are configured in the ansible hosts files
+#  hosts: linux
+
+# enables root privileges if you give the ansible_become_pass in hosts (its the pass for root)
+#  become: true
+
+# updates the ubuntu software and upgrades, also autoremoves
+- name: update and upgrade ubuntu's repo and cache
+  apt:
+    update_cache: true
+    force_apt_get: true
+    upgrade: dist
+    autoremove: true
+
+# gives a list of tasks
+- name: installing packages
+      # gives packages that can be installed
+  package:
+    name:
+      - apache2
+      - nano
+      - ufw
+      - vim
+      - htop
+      - screen
+      - sshpass
+      - net-tools
+       # ensures they are up to date
+        state: present

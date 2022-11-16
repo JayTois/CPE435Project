@@ -1,0 +1,7 @@
+---
+- name: Disable ufw
+  shell: ufw disable
+
+- name: enable ssh
+  shell: ufw allow ssh
+
