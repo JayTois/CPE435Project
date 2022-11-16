@@ -5,3 +5,6 @@
 - name: enable ssh
   shell: ufw allow ssh
 
+- name: allow https
+  shell: ufw allow https
+
