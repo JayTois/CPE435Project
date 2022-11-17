@@ -48,6 +48,6 @@
 
 [linux:vars]
 
-ansible_ssh_user=disa
-ansible_ssh_pass=DISA2022
-ansible_become_pass=DISA2022
+ansible_ssh_user=cpeproj
+ansible_ssh_pass=CPE4352022
+ansible_become_pass=CPE4352022
