@@ -1,6 +1,6 @@
 ---
 - name:
-  hosts: linux
+  hosts: all
   vars:
     distribution:
 

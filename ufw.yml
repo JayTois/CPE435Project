@@ -1,10 +1,16 @@
 ---
-- name: Disable ufw
-  shell: ufw disable
+#the uncomplicated firewall
+- name: enable ufw
+  ufw:
+    state: enabled
 
 - name: enable ssh
   shell: ufw allow ssh
 
 - name: allow https
   shell: ufw allow https
+
+- name: restart ufw
+  ufw:
+    state: reloaded
 
