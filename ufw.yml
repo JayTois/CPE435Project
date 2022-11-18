@@ -15,6 +15,15 @@
 - name: allow https
   shell: ufw allow https
 
+- name: disable unknown ports
+  shell: ufw deny "{{ item }}"
+  loop:
+    - 10250
+    - 10257
+    - 10259
+    - 16443
+    - 25000
+
 - name: restart ufw
   ufw:
     state: reloaded

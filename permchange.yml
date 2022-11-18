@@ -13,4 +13,5 @@
     - /etc/group
     - /etc/sudoers
     - /root/.ssh/authorized_keys
+    - /etc/ssh/sshd_config
 
