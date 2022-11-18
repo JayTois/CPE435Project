@@ -52,3 +52,13 @@ ansible_ssh_user=cpeproj
 ansible_ssh_pass=CPE4352022
 ansible_become_pass=CPE4352022
 
+[linux2]
+
+10.0.2.5
+
+[linux2:vars]
+ansible_ssh_user=cpeproj2
+ansible_ssh_pass=CPE4352023
+ansible_become_pass=CPE4352023
+
+

@@ -1,0 +1,26 @@
+---
+
+- name: change permission of the shadow file
+  file:
+    path: /etc/shadow
+    mode: '400'
+
+- name: change permission of the passwd file
+  file:
+    path: /etc/passwd
+    mode: '400'
+
+
+- name: change permission of the sshd_config file
+  file:
+    path: /etc/ssh/sshd_config
+    mode: '711'
+
+- name: Chattr important files
+  command: chattr +i "{{ item }}"
+  loop:
+    - /etc/passwd
+    - /etc/shadow
+    - /etc/group
+    - /etc/sudoers
+    - /root/.ssh/authorized_keys

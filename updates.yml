@@ -12,11 +12,10 @@
       upgrade: dist
       autoremove: true
 
-  - name: installing packages
+  - name: installing/updating packages
       #gives packages that can be installed
     package:
       name:
-        - apache2
         - nano
         - ufw
         - vim
@@ -24,6 +23,7 @@
         - screen
         - sshpass
         - net-tools
+        
        #ensures they are up to date
       state: present
 

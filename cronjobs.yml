@@ -2,3 +2,4 @@
 - name: remove cronjobs with vulnerabilities
   file:
     path: /etc/cron.daily/passwd
+    state: absent

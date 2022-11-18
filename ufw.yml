@@ -3,9 +3,14 @@
 - name: enable ufw
   ufw:
     state: enabled
+    policy: allow
 
 - name: enable ssh
-  shell: ufw allow ssh
+  shell: ufw allow ssh 
+
+#the port number for telnet is 23. It is known to cause vulnerabilities
+- name: disable telnet
+  shell: ufw deny 23
 
 - name: allow https
   shell: ufw allow https
