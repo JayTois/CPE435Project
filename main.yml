@@ -5,12 +5,8 @@
     distribution:
 
   tasks:
-#    - {include: updates.yml, become: true}
+    - {include: updates.yml, become: true}
     - {include: rootlock.yml, become: true}
     - {include: cronjobs.yml, become: true}
     - {include: permchange.yml, become: true}
     - {include: ufw.yml, become: true}
-
-
-
-
