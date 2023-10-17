@@ -17,7 +17,7 @@ rootlock.yml
   - prevents password login via root
 
 ufw.yml - uncomplicated firewasll
-- allows and prevents different ports (servivces)
+- allows and prevents different ports (services) such as telnet
 - restarts the firewall subsequently to update services
 
 update.yml
